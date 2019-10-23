@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+        <title>BrickBreak</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./css/style.css"/>
+      <link rel="stylesheet" type="text/css" href="./css/csshake.min.css">
+  </head>
+  <body>
+  <!--BBGame UI Start-->
+      <div class="main-area">
+        <div class="options-area" id="optionsArea" style="opacity: 0;">
+                  <h1 class="bb">Brick Break</h1>
+            <!--Menu area in left side-->
+            <div class="menu-options">
+                <ul>
+                  <li id="game-new" class="hover">New Game</li>
+                  <li id="game-resume" style="display:none;">Resume</li>
+                  <li id="game-pause">Pause</li>
+                  <li id="game-restart">Restart</li>
+                </ul>
+            </div>
+            <div class="next-block-options">
+                <canvas id="canvas-next-block-options"></canvas>
+            </div>
+            <div class="statistics-options">
+                <h2>Statistics : </h2>
+                <ol>
+                  <li>LEVEL : <span id="game-level">0</span></li>
+                  <li>SCORE : <span id="game-score">0</span></li>
+                  <li>TIME  : <span id="game-time">0</span></li>
+                </ol>
+            </div>
+        </div>
+          <!--Main Paying area-->
+        <div class="play-area" id="playArea">
+            <div id="intro-screen" class="bb">
+                <h1 class="bb">Brick Break</h1>
+                <h4>Controls</h4>
+                <div class="section">
+                    <p>SPACEBAR  - Launch the ball from paddle.</p>
+                    <p>LEFT - Move the paddle left.</p>
+                    <p>RIGHT - Move the paddle right.</p>
+
+                </div>
+                <h4>Goal</h4>
+                <div class="section">
+                    <p>
+                        Goal of the game is simple destroy all the
+                        colored bricks and clear the level and continue
+                        to the next level, keep doing till you finish the
+                        game or your ball miss the paddle and burn
+                        in the <em>black flames of death</em>.
+                    </p>
+                </div>
+                <h1></h1>
+                <button class="btn" id="start-game">START</button>
+
+            </div>
+
+        </div>
+          <!--progressbar-->
+        <div id="loader-area">
+         <div id="progressbar"></div>
+       </div>
+      </div>
+<!--BBGame UI End-->
+
+  <!--BBGame Scripts-->
+      <script src="js/libs/Utility.js"></script>
+      <script src="js/libs/iCanvas.js"></script>
+      <script src="js/libs/sonantx.js"></script>
+      <script src="js/Helpers.js"></script>
+      <script src="js/Variables.js"></script>
+      <script src="js/Events.js"></script>
+      <script src="js/Methods.js"></script>
+      <script src="js/BBObject.js"></script>
+      <script src="js/Explosion.js"></script>
+      <script src="js/TextEffect.js"></script>
+      <script src="js/Brick.js"></script>
+      <script src="js/Paddle.js"></script>
+      <script src="js/Ball.js"></script>
+      <script src="js/Level.js"></script>
+      <script src="js/BBGame.js"></script>
+
+  </body>
+</html>

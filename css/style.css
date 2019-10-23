@@ -1,0 +1,329 @@
+@font-face {
+    font-family: PressStart2P;
+    src: url(fonts/PressStart2P.ttf);
+}
+html,body{
+    margin: 0;
+    padding: 0;
+    background-color: #666666;
+    cursor: crosshair;
+}
+.main-area{
+    width:600px;
+    height: 600px;
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    top:0;
+    margin: auto;
+    border:2px solid rgb(255, 0, 0);
+    background-color: #191919;
+}
+
+.options-area{
+    width:200px;
+    height:604px;
+    float:left;
+    background-color: #191919;
+    border-left: 2px solid rgb(255, 0, 0);
+    border-top: 2px solid rgb(255, 0, 0);
+    border-bottom: 2px solid rgb(255, 0, 0);
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    top:-2px;
+}
+.play-area{
+    width:600px;
+    height:600px;
+    float:left;
+    background-color: #191919;
+    position: relative;
+    display: none;
+}
+
+.play-area canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.options-area h1{
+    text-align: center;
+    color:rgb(255, 0, 0);
+}
+
+.options-area ul,.options-area .statistics-options ol{
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 70%;
+    border-top : 2px solid rgb(255, 0, 0);
+}
+.options-area ul li,.options-area .statistics-options ol li{
+    color: rgb(255, 0, 0);
+    font-size: 15px;
+    padding: 10px;
+    border : 2px solid rgb(255, 0, 0);
+    border-top: none;
+    text-align: center;
+    background: #323232;
+}
+.options-area ul li:hover{
+    cursor:pointer;
+    background-color: rgba(255, 0, 0,0.1);
+}
+
+.options-area .statistics-options h2{
+    color: rgb(255, 0, 0);
+    width: 60%;
+    margin: 0 auto;
+    padding:0;
+    padding: 0 10px;
+}
+.options-area .statistics-options ol{
+    border: none;
+}
+
+.options-area .statistics-options ol li{
+    background-color: transparent;
+    border: none;
+    text-align: left;
+}
+
+.options-area .statistics-options span{
+    color: rgb(255, 0, 0);
+    font-size: 15px;
+    margin-left: 10px;
+}
+.next-block-options{
+    width:100%;
+    height:150px;
+    position: relative;
+}
+#canvas-next-block-options{
+    position: absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    top:0;
+    margin: auto;
+}
+
+#loader-area{
+    position: relative;
+    width:50%;
+    height : 30px;
+    background-color:#999;
+    margin: 49% auto;
+}
+
+#progressbar{
+    position:absolute;
+    height : 100%;
+    background:rgb(255, 0, 0);
+    box-shadow:0 0 9px 0px rgb(255, 0, 0);
+    width:0%;
+    z-index: 1000;
+}
+
+
+#intro-screen{
+    position: absolute;
+    width:90%;
+    height: 90%;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: rgba(0,0,0,0.5);
+    z-index: 9999;
+
+}
+
+h1.bb{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 40px;
+    font-family: PressStart2P;
+    text-transform: uppercase;
+    color:rgb(0, 0, 0);
+    text-shadow:
+    -1px -1px 0 rgb(255, 0, 0),
+    1px -1px 0 rgb(255, 0, 0),
+    -1px 1px 0 rgb(255, 0, 0),
+    1px 1px 0 rgb(255, 0, 0);
+}
+
+#intro-screen h4{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 15px;
+    font-family: PressStart2P;
+    text-transform: uppercase;
+    color:rgb(0, 0, 0);
+    text-shadow:
+    -1px -1px 0 rgb(255, 0, 0),
+    1px -1px 0 rgb(255, 0, 0),
+    -1px 1px 0 rgb(255, 0, 0),
+    1px 1px 0 rgb(255, 0, 0);
+    text-decoration: underline;
+}
+
+
+#intro-screen .section p{
+    font-size: 12px;
+    font-family: PressStart2P;
+    color:rgb(255, 0, 0);
+    padding-left: 60px;
+    line-height: 18px;
+}
+
+.btn{
+    font-size: 16px;
+    font-family: PressStart2P;
+    color:rgb(255, 0, 0);
+    border: 2px solid rgb(255, 0, 0);
+    background: transparent;
+    display: block;
+    padding: 5px;
+    margin: 0 auto;
+    outline: none;
+
+}
+
+.btn:hover{
+    cursor: pointer;
+    outline: none;
+    box-shadow:0 0 9px #f00 ;
+}
+
+.options-area h1 {
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/*************cursor animation*******************/
+#follower {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+#follower #circle1 {
+    position: absolute;
+    -webkit-animation: pulse 2s infinite; /* Chrome, Safari, Opera */
+    animation: pulse 2s infinite;
+    background: #fff;
+    border-radius: 50%;
+    height: 0em;
+    width: 0em;
+    margin-top: 0em;
+    margin-left: 0em;
+}
+#follower #circle2 {
+    position: absolute;
+    -webkit-animation: pulse 4s infinite; /* Chrome, Safari, Opera */
+    animation: pulse 4s infinite;
+    background: rgba(200,0,0,0.8);
+    border-radius: 50%;
+    height: 0em;
+    width: 0em;
+    margin-top: 0em;
+    margin-left: 0em;
+}
+@-moz-keyframes pulse {
+    0% {
+        opacity: 0.2;
+        height: 1em;
+        width: 1em;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+    }
+    50% {
+        opacity: 0.9;
+        height: 3em;
+        width: 3em;
+        margin-top: -1.5em;
+        margin-left: -1.5em;
+    }
+    100% {
+        opacity: 0.2;
+        height: 1em;
+        width: 1em;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+    }
+}
+@-webkit-keyframes pulse {
+    0% {
+        opacity: 0.2;
+        height: 1em;
+        width: 1em;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+    }
+    50% {
+        opacity: 0.9;
+        height: 3em;
+        width: 3em;
+        margin-top: -1.5em;
+        margin-left: -1.5em;
+    }
+    100% {
+        opacity: 0.2;
+        height: 1em;
+        width: 1em;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+    }
+}
+@-o-keyframes pulse {
+    0% {
+        opacity: 0.2;
+        height: 1em;
+        width: 1em;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+    }
+    50% {
+        opacity: 0.9;
+        height: 3em;
+        width: 3em;
+        margin-top: -1.5em;
+        margin-left: -1.5em;
+    }
+    100% {
+        opacity: 0.2;
+        height: 1em;
+        width: 1em;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+    }
+}
+@keyframes pulse {
+    0% {
+        opacity: 0.2;
+        height: 1em;
+        width: 1em;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+    }
+    50% {
+        opacity: 0.9;
+        height: 3em;
+        width: 3em;
+        margin-top: -1.5em;
+        margin-left: -1.5em;
+    }
+    100% {
+        opacity: 0.2;
+        height: 1em;
+        width: 1em;
+        margin-top: -0.5em;
+        margin-left: -0.5em;
+    }
+}
