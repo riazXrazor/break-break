@@ -456,7 +456,7 @@
 
                     if (ballpos.y + BBGame.Ball.getRadius() >= BBGame.Canvas.Stage.canvas.height) {
                         BBGame.Ball.isMoving = false;
-                        BBGame.Ball.accleration = 5;
+                        BBGame.Ball.accleration = 2;
                         BBGame.Ball.color = BBGame.Helpers.HexToRgb("#3f51b5", 100);
                         BBGame.Ball.positionOnPaddle(BBGame.Paddle);
                         BBGame.Variables.LIFE--;

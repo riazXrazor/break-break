@@ -16,7 +16,7 @@ function Ball(radius,color,stage){
     this.stage = stage;
     this.vx = 1;
     this.vy = 1;
-    this.accleration = 5;
+    this.accleration = 2;
     this.isMoving = false;
     var self = this;
     this.tails = Utility.generate(10,function(){
